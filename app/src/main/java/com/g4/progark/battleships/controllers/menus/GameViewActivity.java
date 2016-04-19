@@ -74,11 +74,18 @@ public class GameViewActivity extends AppCompatActivity {
                 player2_ship_grid = new GridView(new Coordinate(x1,y1),
                         Constants.SHIP_GRID_BORDER, Constants.SHIP_GRID_WIDTH, Constants.SHIP_GRID_HEIGHT, Constants.NUMBER_COLUMN_TILES, Constants.NUMBER_ROW_TILES);
 
-                if(Constants.SHIP_TILES1 != null && Constants.STRIKE_TILES1 != null && Constants.SHIP_TILES2 != null){
+                if(Constants.SHIP_TILES1 == null){
+                    throw new Exception("STOOOOP");
+                }
 
-                    player1_ship_grid.setTiles(Constants.SHIP_TILES1);
+                player1_ship_grid.setTiles(Constants.SHIP_TILES1);
+                player2_ship_grid.setTiles(Constants.SHIP_TILES2);
+
+                if(Constants.STRIKE_TILES1 != null){
+
+
                     player1_strike_grid.setTiles(Constants.STRIKE_TILES1);
-                    player2_ship_grid.setTiles(Constants.SHIP_TILES2);
+
 
                 }
 
@@ -105,8 +112,9 @@ public class GameViewActivity extends AppCompatActivity {
 
                 }
 
-                player2_ship_grid.setTiles(Constants.SHIP_TILES2);
                 player1_ship_grid.setTiles(Constants.SHIP_TILES1);
+                player2_ship_grid.setTiles(Constants.SHIP_TILES2);
+
 
                 gameView = new GameView(this, "sea", player2_ship_grid, player2_strike_grid, player1_ship_grid);
             }

@@ -45,6 +45,14 @@
             android:name=".controllers.menus.IntermediateActivity"
             android:label="@string/title_activity_intermediate" >
         </activity>
+        <activity
+            android:name=".controllers.menus.ShipSelectionActivity"
+            android:label="@string/title_activity_ship_selection" >
+        </activity>
+        <activity
+            android:name=".controllers.menus.ShipPlacementActivity"
+            android:label="Grid to place ship" >>
+        </activity>
     </application>
 
 </manifest>

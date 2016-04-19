@@ -11,6 +11,13 @@
     <string name="title_activity_game_view">GameViewActivity</string>
     <string name="title_activity_intermediate">IntermediateActivity</string>
     <string name="game_instruct">Swipe to start turnt</string>
+    <string name="title_activity_ship_selection">ShipSelectionActivity</string>
+    <string-array name="orientations">
+        <item>UP</item>
+        <item>DOWN</item>
+        <item>LEFT</item>
+        <item>RIGHT</item>
+    </string-array>
 
 
 </resources>

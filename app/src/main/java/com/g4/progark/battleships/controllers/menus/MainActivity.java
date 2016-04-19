@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGame(View v){
 
-        Intent intent = new Intent(this, GameViewActivity.class);
+        Intent intent = new Intent(this, ShipSelectionActivity.class);
         startActivity(intent);
 
 
