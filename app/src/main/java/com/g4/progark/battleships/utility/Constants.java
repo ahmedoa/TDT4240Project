@@ -8,6 +8,7 @@ import com.g4.progark.battleships.models.GameTile;
 import com.g4.progark.battleships.models.Ship;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by ahmed on 03.04.2016.
@@ -69,6 +70,9 @@ public class Constants {
 
 
     public static Ship CURRENT_SHIP_SELECTED = null;
+
+    public static List<Ship> PLAYER1_SHIPS = null;
+    public static List<Ship> PLAYER2_SHIPS = null;
 
 
 }

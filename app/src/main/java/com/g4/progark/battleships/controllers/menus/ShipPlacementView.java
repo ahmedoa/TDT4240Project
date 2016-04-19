@@ -18,6 +18,8 @@ import com.g4.progark.battleships.models.ShipTile;
 import com.g4.progark.battleships.utility.Constants;
 import com.g4.progark.battleships.utility.Coordinate;
 
+import java.util.ArrayList;
+
 /**
  * Created by ahmed on 15.04.2016.
  */
@@ -100,7 +102,7 @@ public class ShipPlacementView extends SurfaceView implements SurfaceHolder.Call
 
         Coordinate c = currentShipGrid.convertToTileCoordinate(x,y);
 
-
+        ArrayList<Coordinate> shipcoordinates = new ArrayList<Coordinate>();
 
         for (int i = 0; i < currentShip.getTile_length() ; i++) {
 
@@ -109,11 +111,22 @@ public class ShipPlacementView extends SurfaceView implements SurfaceHolder.Call
 
                 currentShipGrid.getTile2(c.getX() - i, c.getY()).setGameTileState(new ShipTile());
 
+                if(i == 0){
+                    Constants.CURRENT_SHIP_SELECTED.setStart_position(new Coordinate(c.getX()-i, c.getY()));
+                }
 
+                shipcoordinates.add(new Coordinate(c.getX()-i, c.getY()));
 
             } else if (currentShip.getOrientation() == Orientation.RIGHT) {
 
                 currentShipGrid.getTile2(c.getX() + i, c.getY()).setGameTileState(new ShipTile());
+
+                if(i == 0){
+                    Constants.CURRENT_SHIP_SELECTED.setStart_position(new Coordinate(c.getX()+ i, c.getY()));
+                }
+
+
+                shipcoordinates.add(new Coordinate(c.getX() + i, c.getY()));
 
 
             } else if (currentShip.getOrientation() == Orientation.UP) {
@@ -126,15 +139,33 @@ public class ShipPlacementView extends SurfaceView implements SurfaceHolder.Call
                 GameTile gt = currentShipGrid.getTile2(c.getX(), c.getY() - i);
                 gt.setGameTileState(new ShipTile());
 
+                if(i == 0){
+                    Constants.CURRENT_SHIP_SELECTED.setStart_position(new Coordinate(c.getX(), c.getY()-i));
+                }
+
+
+                shipcoordinates.add(new Coordinate(c.getX(), c.getY()-i));
+
 
             } else if (currentShip.getOrientation() == Orientation.DOWN) {
 
+
                 currentShipGrid.getTile2(c.getX(), c.getY() + i).setGameTileState(new ShipTile());
 
+                if(i == 0){
+                    Constants.CURRENT_SHIP_SELECTED.setStart_position(new Coordinate(c.getX(), c.getY()+i));
+                }
+
+
+                shipcoordinates.add(new Coordinate(c.getX(), c.getY() + i));
 
             }
 
         }
+
+        Constants.CURRENT_SHIP_SELECTED.setShip_coordinates(shipcoordinates);
+
+        addShip();
 
         if(Constants.CURRENT_PLAYER == 1){
             Constants.SHIP_TILES1 = currentShipGrid.getTiles();
@@ -142,6 +173,14 @@ public class ShipPlacementView extends SurfaceView implements SurfaceHolder.Call
             Constants.SHIP_TILES2 = currentShipGrid.getTiles();
         }
 
+    }
+
+    public void addShip(){
+        if(Constants.CURRENT_PLAYER == 1){
+            Constants.PLAYER1_SHIPS.add(Constants.CURRENT_SHIP_SELECTED);
+        } else {
+            Constants.PLAYER2_SHIPS.add(Constants.CURRENT_SHIP_SELECTED);
+        }
     }
 
     @Override
