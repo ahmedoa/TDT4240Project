@@ -18,8 +18,8 @@ public class MainMenu extends AndroidMenu {
     public void goToGameModes(View view) {
         goTo(GameMode.class);
     }
-    public void goToLobby(View view) {
-        goTo(Lobby.class);
-    }
+
+  /** Commented as we are not implementing networked game
+   *  public void goToLobby(View view) {goTo(Lobby.class);    }*/
 
 }

@@ -53,6 +53,30 @@
             android:name=".controllers.menus.ShipPlacementActivity"
             android:label="Grid to place ship" >>
         </activity>
+
+        <activity
+            android:name=".controllers.menus.GameModeListActivity"
+             >
+        </activity>
+
+
+
+
+
+
+        <activity
+            android:name=".controllers.menus.FirepowerActivity"
+            android:label="@string/title_activity_firepower" >
+        </activity>
+        <activity
+            android:name=".controllers.menus.GameModeActivity"
+            android:label="@string/title_activity_firepower" >
+        </activity>
+
+        <activity
+            android:name=".controllers.menus.AdvancedGameSetupActivity"
+            android:label="@string/title_activity_intermediate" >
+        </activity>
     </application>
 
 </manifest>

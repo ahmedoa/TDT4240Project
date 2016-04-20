@@ -5,32 +5,35 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.g4.progark.battleships.R;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by rout on 18.04.2016.
+ */
+public class GameModeListActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        /**Added  by Itishree  **/
-
-        Button b3 = (Button) findViewById(R.id.button3);
-
-        b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, GameModeListActivity.class));
-            }
-        });
-
-
+        setContentView(R.layout.activity_game_mode_list);
+        ListView listView=(ListView)findViewById(R.id.listView);
+        ViewGroup headerView=(ViewGroup)getLayoutInflater().inflate(R.layout.header,listView,false);
+        listView.addHeaderView(headerView);
+        String[] items=getResources().getStringArray(R.array.list_game);
+        ListAdapter adapter=new ListAdapter(this,R.layout.rowlayout,R.id.txtmode,items);
+        listView.setAdapter(adapter);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -52,22 +55,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void goToGame(View v){
-
-        Intent intent = new Intent(this, AdvancedGameSetupActivity.class);
-        startActivity(intent);
-
-
-    }
-/**Added  by Itishree to include the goto game modes view **/
-    public void goToGameModes(View v){
-
-        Intent intent1 = new Intent(this, GameModeListActivity.class);
-       // Intent intent1 = new Intent(this, AdvancedGameSetupActivity.class);
-        startActivity(intent1);
-
-    }
-
-
 }

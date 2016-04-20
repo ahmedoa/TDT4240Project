@@ -7,6 +7,7 @@ import com.g4.progark.battleships.draw_classes.GameView;
 import com.g4.progark.battleships.models.GameTile;
 import com.g4.progark.battleships.models.Ship;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -71,8 +72,8 @@ public class Constants {
 
     public static Ship CURRENT_SHIP_SELECTED = null;
 
-    public static List<Ship> PLAYER1_SHIPS = null;
-    public static List<Ship> PLAYER2_SHIPS = null;
+    public static List<Ship> PLAYER1_SHIPS = new ArrayList<Ship>();
+    public static List<Ship> PLAYER2_SHIPS = new ArrayList<Ship>();
 
 
 }

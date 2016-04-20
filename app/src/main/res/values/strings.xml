@@ -19,5 +19,45 @@
         <item>RIGHT</item>
     </string-array>
 
+    <string-array name="list_game">
+        <item>Standard_ details1</item>
+        <item>Oneshot_details2</item>
+        <item>Advanced_details3</item>
+
+    </string-array>
+
+    <string name="title_activity_firepower">FirePowerActivity</string>
+
+
+
+    <string name="title_firePower_text_view">Choose your weapon</string>
+
+    <string name="normal_firepower_button">Normal</string>
+
+    <string name="Cluster_bomb_firepower_button">Cluster bomb</string>
+
+    <string name="air_strike_firepower_button">Air strike</string>
+
+    <string name="normal_firepower_text_view">Standard attack, click and fire at one tile</string>
+
+    <string name="cluster_bomb_text_view">Fire at one tile, and each tile connected to that tile will also be damaged</string>
+
+    <string name="air_strike_text_view">Fire a straight horizontal line, across the map</string>
+
+    <string name="back_button">Back</string>
+
+    <string name="normal_game_mode_button">Normal</string>
+
+    <string name="advanced_game_mode_button">Advanced</string>
+
+    <string name="advanced_setup_text_view">Setup</string>
+
+    <string name="normal_text_view">Normal</string>
+
+    <string name="cluster_bomb_firepower_text_view">Cluster bomb</string>
+
+    <string name="air_strike_firepower_text_view">Air strike</string>
+
+    <string name="start_game_button">Start Game</string>
 
 </resources>
