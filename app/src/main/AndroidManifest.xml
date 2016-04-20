@@ -28,15 +28,15 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Set to "landscape" to change orientation -->
         </activity>
         <activity
-            android:name=".controllers.menus.Lobby"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Set to "landscape" to change orientation -->
-        </activity>
-        <activity
             android:name=".controllers.menus.OptionsMenu"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Set to "landscape" to change orientation -->
         </activity>
+        <activity
+            android:name=".controllers.menus.GameModeActivity"
+            android:label="@string/title_activity_game_mode" >
+        </activity>
+
         <activity
             android:name=".controllers.menus.GameViewActivity"
             android:label="@string/title_activity_game_view" >

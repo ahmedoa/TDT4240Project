@@ -2,18 +2,46 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\ahmed\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jar="C:\Users\rout\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
-        <dex dex="C:\Users\ahmed\Documents\Android studio files\Tdt4240Battleships\app\build\intermediates\pre-dexed\debug\gson-2.5-8c530a61c62b175f00440939e89511a78bec5552.jar" />
+        <dex dex="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\pre-dexed\debug\gson-2.5-54d778f1a163268ab8907aaac58a7412c3ad01a7.jar" />
     </item>
     <item
-        jar="C:\Users\ahmed\.gradle\caches\modules-2\files-2.1\org.immutables\gson\2.1.15\9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99\gson-2.1.15.jar"
+        jar="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\pre-dexed\debug\classes-4afc9749a994cad04f98648d6ba4c7fc5b27d199.jar" />
+    </item>
+    <item
+        jar="C:\Users\rout\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-2ac35a63123872e93b90c5a45888baa418a75455.jar" />
+    </item>
+    <item
+        jar="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\pre-dexed\debug\classes-53c4508af51381e04975a4ac4531fdf46960cdc5.jar" />
+    </item>
+    <item
+        jar="C:\Users\rout\.gradle\caches\modules-2\files-2.1\org.immutables\gson\2.1.15\9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99\gson-2.1.15.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99">
-        <dex dex="C:\Users\ahmed\Documents\Android studio files\Tdt4240Battleships\app\build\intermediates\pre-dexed\debug\gson-2.1.15-a1a8a1b27550392427ee6153dcbad8e81f5de198.jar" />
+        <dex dex="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\pre-dexed\debug\gson-2.1.15-4bdf35b6f66d3b3a1394561047a34500685b8cf3.jar" />
+    </item>
+    <item
+        jar="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\rout\AndroidStudioProjects\TDT4240Project\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-a7e29e5c5b0076d81cd1d4897e84642aaef0a0ae.jar" />
     </item>
 
 </items>

@@ -1,33 +1,20 @@
 package com.g4.progark.battleships.draw_classes;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.widget.Toast;
 
-import com.g4.progark.battleships.controllers.AndroidMenu;
 import com.g4.progark.battleships.controllers.menus.IntermediateActivity;
-import com.g4.progark.battleships.controllers.menus.Lobby;
-import com.g4.progark.battleships.controllers.menus.MainActivity;
 import com.g4.progark.battleships.models.Drawable;
 import com.g4.progark.battleships.models.EmptyStruckTile;
-import com.g4.progark.battleships.models.EmptyTile;
 import com.g4.progark.battleships.models.GameMap;
 import com.g4.progark.battleships.models.GameTile;
-import com.g4.progark.battleships.models.TileState;
 import com.g4.progark.battleships.utility.Constants;
 import com.g4.progark.battleships.utility.Coordinate;
-
-import java.io.Serializable;
-import java.util.HashMap;
 
 /**
  * Created by ahmed on 31.03.2016.

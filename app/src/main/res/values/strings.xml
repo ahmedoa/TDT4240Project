@@ -6,11 +6,21 @@
 
     <string name="main_menu">Main menu</string>
     <string name="options_menu">Options</string>
-    <string name="game_mode">Game modes</string>
+    <string name="game_mode">Start Game</string>
     <string name="lobby">Lobby</string>
+    <string name="title_activity_game_mode">GameModeActivity</string>
     <string name="title_activity_game_view">GameViewActivity</string>
     <string name="title_activity_intermediate">IntermediateActivity</string>
     <string name="game_instruct">Swipe to start turnt</string>
 
+    <string-array name="list_game">
+        <item>Standard_ details1</item>
+        <item>Oneshot_details2</item>
+        <item>Advanced_details3</item>
+
+    </string-array>
+
 
 </resources>
+
+
