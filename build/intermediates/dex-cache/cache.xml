@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\pre-dexed\debug\classes-7353d0bb3c0d8ed41d6aa3d3c90f14f3a33537d9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Aleksander\.gradle\caches\modules-2\files-2.1\org.immutables\gson\2.1.15\9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99\gson-2.1.15.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99">
+        <dex dex="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\pre-dexed\debug\gson-2.1.15-aba0dfbec253e45bf04e66091f04c1a83375229e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\pre-dexed\debug\classes-ce40d3f417f1c8f08ff931da862deb518eb86213.jar" />
+    </item>
+    <item
+        jar="C:\Users\Aleksander\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\pre-dexed\debug\gson-2.5-cd125ef59a9183900f75b87f3a6b496b58069dfc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Aleksander\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-f2825dd28822121efbb46746ce8a69cb55686519.jar" />
+    </item>
+    <item
+        jar="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Aleksander\Documents\Skole\ProgArk\TDT4240ProjectMerge\TDT4240Project\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-81b596ca804afa4e493d5c521d6a12e03b3e58b0.jar" />
+    </item>
+
+</items>
