@@ -60,9 +60,7 @@ public class GameTile{
 
     }
 
-    public Drawable getGameTileState() {
-        return gameTileState;
-    }
+    public Drawable getGameTileState() { return gameTileState; }
 
     public void setGameTileState(Drawable gameTileState) {
         this.gameTileState = gameTileState;

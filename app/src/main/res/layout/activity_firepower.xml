@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_firePower_text_view"
+        android:id="@+id/titleTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleTextView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="@string/normal_firepower_button"
+                android:id="@+id/normal_button"
+                android:layout_marginTop="68dp"
+                android:layout_below="@+id/titleTextView"
+                android:layout_toLeftOf="@+id/titleTextView"
+                android:layout_toStartOf="@+id/titleTextView"
+                android:layout_column="0"
+                android:onClick="setToNormal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/normal_firepower_text_view"
+                android:id="@+id/normalDescTextView"
+                android:layout_column="1" />
+        </TableRow>
+        setToClusterBomb
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="@string/Cluster_bomb_firepower_button"
+                android:id="@+id/cluster_bomb_button"
+                android:layout_below="@+id/air_strike_button"
+                android:layout_alignLeft="@+id/air_strike_button"
+                android:layout_alignStart="@+id/air_strike_button"
+                android:layout_marginTop="49dp"
+                android:layout_column="0"
+                android:onClick="setToClusterBomb"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cluster_bomb_text_view"
+                android:id="@+id/clusterBombDescTextView"
+                android:layout_column="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="@string/air_strike_firepower_button"
+                android:id="@+id/air_strike_button"
+                android:layout_below="@+id/normal_button"
+                android:layout_alignLeft="@+id/normal_button"
+                android:layout_alignStart="@+id/normal_button"
+                android:layout_marginTop="29dp"
+                android:layout_column="0"
+                android:onClick="setToAirStrike"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/airStrikeTextView"
+                android:layout_column="1"
+                android:text="@string/air_strike_text_view" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText android:id="@+id/EditText999"
+                android:layout_column="0"
+                android:text="@string/Cluster_bomb_firepower_button" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

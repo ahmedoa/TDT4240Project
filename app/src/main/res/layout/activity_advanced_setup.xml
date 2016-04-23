@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/advanced_setup_text_view"
+        android:id="@+id/setupTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/normal_text_view"
+        android:id="@+id/normalTextView"
+        android:layout_marginTop="72dp"
+        android:layout_below="@+id/setupTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cluster_bomb_firepower_text_view"
+        android:id="@+id/clusterBombTextView"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/normalTextView"
+        android:layout_alignLeft="@+id/normalTextView"
+        android:layout_alignStart="@+id/normalTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/air_strike_firepower_text_view"
+        android:id="@+id/airStrikeTextView"
+        android:layout_below="@+id/clusterBombTextView"
+        android:layout_alignLeft="@+id/clusterBombTextView"
+        android:layout_alignStart="@+id/clusterBombTextView"
+        android:layout_marginTop="29dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/normalEditText"
+        android:hint="999"
+        android:layout_above="@+id/clusterBombTextView"
+        android:layout_alignRight="@+id/clusterBombEditText"
+        android:layout_alignEnd="@+id/clusterBombEditText"
+        android:inputType="number"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clusterBombEditText"
+        android:hint="0"
+        android:layout_alignBottom="@+id/clusterBombTextView"
+        android:layout_alignLeft="@+id/airStrikeEditText"
+        android:layout_alignStart="@+id/airStrikeEditText"
+        android:inputType="number"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/airStrikeEditText"
+        android:hint="0"
+        android:layout_alignBottom="@+id/airStrikeTextView"
+        android:layout_alignLeft="@+id/setupTextView"
+        android:layout_alignStart="@+id/setupTextView"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_game_button"
+        android:id="@+id/startGameButton"
+        android:layout_below="@+id/airStrikeEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:onClick="startGame"/>
+</RelativeLayout>
