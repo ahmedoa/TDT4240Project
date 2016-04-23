@@ -5,6 +5,11 @@ package com.g4.progark.battleships.models;
  */
 public enum Orientation {
 
+    UP,
+    DOWN,
+    LEFT,
+    RIGHT
+
 
 }
 

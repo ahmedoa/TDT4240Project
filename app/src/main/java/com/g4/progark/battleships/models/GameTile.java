@@ -87,4 +87,12 @@ public class GameTile{
     public float getC() {
         return c;
     }
+
+    public void setR(float r) {
+        this.r = r;
+    }
+
+    public void setC(float c) {
+        this.c = c;
+    }
 }

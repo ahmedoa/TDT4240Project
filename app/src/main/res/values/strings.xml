@@ -8,10 +8,20 @@
     <string name="options_menu">Options</string>
     <string name="game_mode">Start Game</string>
     <string name="lobby">Lobby</string>
-    <string name="title_activity_game_mode">GameModeActivity</string>
+    <string name="title_activity_game_mode_list">GameModeActivity</string>
+    <string name="title_activity_game_map_selection_list">GameMapSelectionActivity</string>
     <string name="title_activity_game_view">GameViewActivity</string>
     <string name="title_activity_intermediate">IntermediateActivity</string>
-    <string name="game_instruct">Swipe to start turnt</string>
+    <string name="game_instruct">Swipe to start turn</string>
+    <string name="title_activity_ship_selection">ShipSelectionActivity</string>
+    <string name="name">ListViewBaseAdapter</string>
+    <string name="image">Thumbnail</string>
+    <string-array name="orientations">
+        <item>UP</item>
+        <item>DOWN</item>
+        <item>LEFT</item>
+        <item>RIGHT</item>
+    </string-array>
 
     <string-array name="list_game">
         <item>Standard_ details1</item>

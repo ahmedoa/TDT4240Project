@@ -79,6 +79,28 @@ public class GridView{
     }
 
 
+    public void reAdjustCoordinates(){
+
+
+
+            float xcoordinate = top_left.getX();
+            float ycoordinate = top_left.getY();
+
+            for (int i = 0; i < num_cols; i++) {
+                //xcoordinate = xcoordinate+i*tile_width;
+                for (int j = 0; j < num_rows; j++) {
+
+
+                    //tiles.put(new Coordinate((float)i,(float)j), new GameTile(new EmptyTile(), xcoordinate+i*tile_width, ycoordinate+j*tile_height));
+                    tiles.get(new Coordinate((float)i, (float)j)).setC(xcoordinate+i*tile_width);
+                    tiles.get(new Coordinate((float)i, (float)j)).setR(ycoordinate + j * tile_height);
+                }
+            }
+
+
+
+    }
+
 
     public void init(){
 
@@ -148,6 +170,15 @@ public class GridView{
         */
     }
 
+    public GameTile getTile2(float col, float row){
+        GameTile gt = tiles.get(new Coordinate(col, row));
+
+        if(gt == null){
+            return null;
+        } else {
+            return gt;
+        }
+    }
 
     public GameTile getTile(float x, float y){
 
@@ -164,9 +195,24 @@ public class GridView{
 
        // Set<Coordinate> cs = tiles.keySet();
 
+        if(tile != null) {
 
-        return tile;
+            return tile;
+        } else {
+            return null;
+        }
         //return tiles.get(new Coordinate(x/tile_width, y/tile_height));
+
+    }
+
+    public Coordinate convertToTileCoordinate(float x, float y){
+
+        int column = (int)((x-top_left.getX())/tile_width);
+        int row = (int)((y-top_left.getY())/tile_height);
+
+        Coordinate c = new Coordinate(column,row);
+
+        return c;
 
     }
 
@@ -190,6 +236,8 @@ public class GridView{
     }
 
     public void setTiles(HashMap<Coordinate, GameTile> tiles) {
+
         this.tiles = tiles;
+        reAdjustCoordinates();
     }
 }

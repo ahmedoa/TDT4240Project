@@ -1,12 +1,10 @@
 package com.g4.progark.battleships.utility;
 
-import android.content.res.Resources;
-import android.graphics.Canvas;
-
-import com.g4.progark.battleships.draw_classes.GameView;
 import com.g4.progark.battleships.models.GameTile;
+import com.g4.progark.battleships.models.Ship;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by ahmed on 03.04.2016.
@@ -54,6 +52,11 @@ public class Constants {
     public static int NUMBER_ROW_TILES = 10;
     public static int NUMBER_COLUMN_TILES = 10;
 
+
+    //Roughly 60% of the tiles can be used for ship placement.
+    public static int NUMBER_SHIP_TILES_PLAYER1 =  10;
+    public static int NUMBER_SHIP_TILES_PLAYER2 =  10;
+
     public static HashMap<Coordinate, GameTile> SHIP_TILES1 = null;
     public static HashMap<Coordinate, GameTile> STRIKE_TILES1 = null;
 
@@ -61,6 +64,11 @@ public class Constants {
     public static HashMap<Coordinate, GameTile> SHIP_TILES2 = null;
     public static HashMap<Coordinate, GameTile> STRIKE_TILES2 = null;
 
+
+    public static Ship CURRENT_SHIP_SELECTED = null;
+
+    public static List<Ship> PLAYER1_SHIPS = null;
+    public static List<Ship> PLAYER2_SHIPS = null;
 
 
 }

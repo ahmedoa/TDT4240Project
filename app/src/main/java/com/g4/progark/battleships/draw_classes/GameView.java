@@ -53,6 +53,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback{
 
     }
 
+    
 
     public void strikeEnemyShipGrid(Drawable newState, float x, float y){
 

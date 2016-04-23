@@ -1,35 +1,16 @@
 package com.g4.progark.battleships.controllers.menus;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Toast;
 
 import com.g4.progark.battleships.R;
-import com.g4.progark.battleships.controllers.GameController;
 import com.g4.progark.battleships.draw_classes.GameView;
 import com.g4.progark.battleships.draw_classes.GridView;
-import com.g4.progark.battleships.models.GameMap;
-import com.g4.progark.battleships.models.GameTile;
-import com.g4.progark.battleships.models.Player;
 import com.g4.progark.battleships.utility.Constants;
 import com.g4.progark.battleships.utility.Coordinate;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class GameViewActivity extends AppCompatActivity {
 
@@ -74,11 +55,18 @@ public class GameViewActivity extends AppCompatActivity {
                 player2_ship_grid = new GridView(new Coordinate(x1,y1),
                         Constants.SHIP_GRID_BORDER, Constants.SHIP_GRID_WIDTH, Constants.SHIP_GRID_HEIGHT, Constants.NUMBER_COLUMN_TILES, Constants.NUMBER_ROW_TILES);
 
-                if(Constants.SHIP_TILES1 != null && Constants.STRIKE_TILES1 != null && Constants.SHIP_TILES2 != null){
+                if(Constants.SHIP_TILES1 == null){
+                    throw new Exception("STOOOOP");
+                }
 
-                    player1_ship_grid.setTiles(Constants.SHIP_TILES1);
+                player1_ship_grid.setTiles(Constants.SHIP_TILES1);
+                player2_ship_grid.setTiles(Constants.SHIP_TILES2);
+
+                if(Constants.STRIKE_TILES1 != null){
+
+
                     player1_strike_grid.setTiles(Constants.STRIKE_TILES1);
-                    player2_ship_grid.setTiles(Constants.SHIP_TILES2);
+
 
                 }
 
@@ -105,8 +93,9 @@ public class GameViewActivity extends AppCompatActivity {
 
                 }
 
-                player2_ship_grid.setTiles(Constants.SHIP_TILES2);
                 player1_ship_grid.setTiles(Constants.SHIP_TILES1);
+                player2_ship_grid.setTiles(Constants.SHIP_TILES2);
+
 
                 gameView = new GameView(this, "sea", player2_ship_grid, player2_strike_grid, player1_ship_grid);
             }

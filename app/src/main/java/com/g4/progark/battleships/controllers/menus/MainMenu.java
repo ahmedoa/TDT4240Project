@@ -10,15 +10,17 @@ import com.g4.progark.battleships.controllers.AndroidMenu;
 public class MainMenu extends AndroidMenu {
 
 
-
+/** Commented as we are not using options menu
     public void goToOptions(View view) {
         goTo(OptionsMenu.class);
-    }
+    }**/
+
 
     public void goToGameModes(View view) {
         goTo(GameMode.class);
     }
 
-  /**  public void goToLobby(View view) {goTo(Lobby.class);    }*/
+  /** Commented as we are not implementing networked game
+   *  public void goToLobby(View view) {goTo(Lobby.class);    }*/
 
 }

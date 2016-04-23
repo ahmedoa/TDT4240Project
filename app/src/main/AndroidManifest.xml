@@ -18,8 +18,10 @@
         </activity>
         <activity
             android:name=".controllers.menus.MainMenu"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Changing this, you can set the default theme. Themes can be created. -->
-            android:screenOrientation="portrait"> 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+        <!-- Changing this, you can set the default theme. Themes can be created. -->
+
             <!-- Set to "landscape" to change default orientation -->
         </activity>
         <activity
@@ -28,15 +30,13 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Set to "landscape" to change orientation -->
         </activity>
         <activity
-            android:name=".controllers.menus.OptionsMenu"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Set to "landscape" to change orientation -->
+            android:name=".controllers.menus.GameModeListActivity"
+            android:label="@string/title_activity_game_mode_list" >
         </activity>
         <activity
-            android:name=".controllers.menus.GameModeActivity"
-            android:label="@string/title_activity_game_mode" >
+            android:name=".controllers.menus.GameMapSelectionListActivity"
+            android:label="@string/title_activity_game_map_selection_list" >
         </activity>
-
         <activity
             android:name=".controllers.menus.GameViewActivity"
             android:label="@string/title_activity_game_view" >
@@ -44,6 +44,14 @@
         <activity
             android:name=".controllers.menus.IntermediateActivity"
             android:label="@string/title_activity_intermediate" >
+        </activity>
+        <activity
+            android:name=".controllers.menus.ShipSelectionActivity"
+            android:label="@string/title_activity_ship_selection" >
+        </activity>
+        <activity
+            android:name=".controllers.menus.ShipPlacementActivity"
+            android:label="Grid to place ship" >>
         </activity>
     </application>
 

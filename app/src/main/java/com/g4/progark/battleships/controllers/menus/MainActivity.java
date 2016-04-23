@@ -17,12 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**Added  by Itishree to include the goto game modes view **/
+
         Button b3 = (Button) findViewById(R.id.button3);
 
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, GameModeActivity.class));
+                startActivity(new Intent(MainActivity.this, GameModeListActivity.class));
             }
         });
 
@@ -53,15 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGame(View v){
 
-        Intent intent = new Intent(this, GameViewActivity.class);
+        Intent intent = new Intent(this, ShipSelectionActivity.class);
         startActivity(intent);
 
 
     }
-
+/**Added  by Itishree to include the goto game modes view **/
     public void goToGameModes(View v){
 
-        Intent intent1 = new Intent(this, GameModeActivity.class);
+        Intent intent1 = new Intent(this, GameModeListActivity.class);
         startActivity(intent1);
 
     }
