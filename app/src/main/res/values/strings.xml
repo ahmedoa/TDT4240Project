@@ -12,7 +12,7 @@
     <string name="title_activity_game_map_selection_list">GameMapSelectionActivity</string>
     <string name="title_activity_game_view">GameViewActivity</string>
     <string name="title_activity_intermediate">IntermediateActivity</string>
-    <string name="game_instruct">Swipe to start turn</string>
+    <string name="game_instruct">Next player\'s turn</string>
     <string name="title_activity_ship_selection">ShipSelectionActivity</string>
     <string name="name">ListViewBaseAdapter</string>
     <string name="image">Thumbnail</string>
@@ -24,9 +24,9 @@
     </string-array>
 
     <string-array name="list_game">
-        <item>Standard_ details1</item>
-        <item>Oneshot_details2</item>
-        <item>Advanced_details3</item>
+        <item>Standard_Classic mode</item>
+        <item>Oneshot_One shot destroys a ship</item>
+        <item>Advanced_Several firing types</item>
 
     </string-array>
 

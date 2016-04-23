@@ -3,6 +3,9 @@ package com.g4.progark.battleships.models;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
+import android.view.Display;
+import android.view.WindowManager;
 
 import com.g4.progark.battleships.R;
 import com.g4.progark.battleships.utility.Constants;
@@ -19,22 +22,18 @@ public class GameMap {
 
     public GameMap(Context context, String map_name){
 
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+
         Bitmap temp = BitmapFactory.decodeResource(context.getResources(), context.getResources().getIdentifier(map_name, "drawable", context.getPackageName()));
-        //Bitmap temp = BitmapFactory.decodeResource(context.getResources(), R.drawable.sea);
-
-
-        area = Bitmap.createScaledBitmap(temp, (int)Constants.SCREEN_WIDTH, (int)Constants.SCREEN_HEIGHT,true);
-        //area = Bitmap.createScaledBitmap(temp, 40  , 40,true);
+        area = Bitmap.createScaledBitmap(temp, width, height,true);
     }
-
-
-
 
     public Bitmap getArea() {
         return area;
     }
-
-
-
-
 }

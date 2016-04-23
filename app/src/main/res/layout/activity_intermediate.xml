@@ -1,26 +1,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg">
     tools:context="com.g4.progark.battleships.controllers.menus.IntermediateActivity">
 
 
 
-
-        <TextView android:text="@string/game_instruct" android:layout_width="wrap_content"
+        <TextView android:text="@string/game_instruct"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txt_inter"/>
+            android:id="@+id/txt_inter"
+            android:layout_marginBottom="77dp"
+            android:editable="false"
+            android:textSize="30sp"
+            android:layout_above="@+id/inter_id"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start turn"
             android:id="@+id/inter_id"
-            android:layout_below="@+id/txt_inter"
             android:onClick="startTurn"
-            />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

@@ -35,19 +35,19 @@ public class GameModeListActivity extends AppCompatActivity{
                if (position == 1) {
                    Intent intent = new Intent(GameModeListActivity.this, GameMapSelectionListActivity.class);
                    startActivity(intent);
-                   Toast.makeText(getApplicationContext(), "Standard game mode is selected!!! =)",
+                   Toast.makeText(getApplicationContext(), "Standard game mode",
                            Toast.LENGTH_LONG).show();
                }
                else if (position == 2){
                    Intent intent = new Intent(GameModeListActivity.this, GameMapSelectionListActivity.class);
                    startActivity(intent);
-                   Toast.makeText(getApplicationContext(), "Oneshot game mode is selected!!! =)",
+                   Toast.makeText(getApplicationContext(), "Oneshot game mode",
                            Toast.LENGTH_LONG).show();
                }
                else if (position == 3){
                    Intent intent = new Intent(GameModeListActivity.this, GameMapSelectionListActivity.class);
                    startActivity(intent);
-                   Toast.makeText(getApplicationContext(), "Advanced game mode is selected!!! =)",
+                   Toast.makeText(getApplicationContext(), "Advanced game mode",
                            Toast.LENGTH_LONG).show();
                }
            }

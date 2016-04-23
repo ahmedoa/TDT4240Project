@@ -63,11 +63,7 @@ public class GameViewActivity extends AppCompatActivity {
                 player2_ship_grid.setTiles(Constants.SHIP_TILES2);
 
                 if(Constants.STRIKE_TILES1 != null){
-
-
                     player1_strike_grid.setTiles(Constants.STRIKE_TILES1);
-
-
                 }
 
                 gameView = new GameView(this, "sea", player1_ship_grid, player1_strike_grid, player2_ship_grid);
