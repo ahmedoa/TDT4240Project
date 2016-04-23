@@ -40,8 +40,8 @@ public class AdvancedGameSetupActivity extends AppCompatActivity {
     public void startGame(View v) {
 
         prepareDatabase();
-        Intent intent = new Intent(this, FirepowerActivity.class);
-        intent.putExtra(GameModeActivity.GAME_MODE, gameMode);
+        Intent intent = new Intent(this, ShipSelectionActivity.class);
+        //intent.putExtra(GameModeActivity.GAME_MODE, gameMode);
         startActivity(intent);
 
     }

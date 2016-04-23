@@ -78,6 +78,9 @@ public class GridView{
 
     }
 
+    public float getWidth() { return tile_width; }
+    public float getHeight() { return tile_height; }
+
 
     public void reAdjustCoordinates(){
 
@@ -213,6 +216,17 @@ public class GridView{
         Coordinate c = new Coordinate(column,row);
 
         return c;
+
+    }
+    public Coordinate convertBack(float column, float row){
+
+        float x = column * tile_width + top_left.getX();
+        float y = row * tile_height + top_left.getY();
+
+        Coordinate c = new Coordinate(x,y);
+
+        return c;
+
 
     }
 

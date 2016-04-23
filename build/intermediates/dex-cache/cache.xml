@@ -2,18 +2,46 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\ahmed\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jar="C:\Users\Eier\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-36929f0a10991d412f8c37a4f836d3aa9a12aba9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\pre-dexed\debug\classes-d840bd090cf91bb31e4924d510f0c4116f1d93a0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-3f1b5abf6eadbef16e68f96c8e750ea56235febe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Eier\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
-        <dex dex="C:\Users\ahmed\Documents\Android studio files\Tdt4240Battleships\app\build\intermediates\pre-dexed\debug\gson-2.5-8c530a61c62b175f00440939e89511a78bec5552.jar" />
+        <dex dex="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\pre-dexed\debug\gson-2.5-7f5b2081feef8739e9979cba1ade4ed62dbfe25a.jar" />
     </item>
     <item
-        jar="C:\Users\ahmed\.gradle\caches\modules-2\files-2.1\org.immutables\gson\2.1.15\9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99\gson-2.1.15.jar"
+        jar="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\pre-dexed\debug\classes-2deddeb6e4d9035ad56124b378b8db8b30015c37.jar" />
+    </item>
+    <item
+        jar="C:\Users\Eier\.gradle\caches\modules-2\files-2.1\org.immutables\gson\2.1.15\9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99\gson-2.1.15.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="9d75b2f4a9d8bf4ff7f1b80a0531a34d7b42ed99">
-        <dex dex="C:\Users\ahmed\Documents\Android studio files\Tdt4240Battleships\app\build\intermediates\pre-dexed\debug\gson-2.1.15-a1a8a1b27550392427ee6153dcbad8e81f5de198.jar" />
+        <dex dex="C:\Users\Eier\Desktop\AndroidDev\ProgArch\TDT4240Project-feature-Putting_files_together\app\build\intermediates\pre-dexed\debug\gson-2.1.15-5632ed71a0d3f548e13a65c2d9aba3efaaf7856e.jar" />
     </item>
 
 </items>

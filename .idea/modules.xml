@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tdt4240Battleships.iml" filepath="$PROJECT_DIR$/Tdt4240Battleships.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tdt4240Battleships-Develop.iml" filepath="$PROJECT_DIR$/Tdt4240Battleships-Develop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDT4240Project-feature-Putting_files_together.iml" filepath="$PROJECT_DIR$/TDT4240Project-feature-Putting_files_together.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

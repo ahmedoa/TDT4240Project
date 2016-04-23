@@ -32,7 +32,7 @@ import java.util.HashMap;
 public class FirepowerActivity extends ListActivity {
 
     FirepowerFactory firePowerFactory = new FirepowerFactory();
-    Firepower currentFirepower = null;
+    int currentFirepower;
     int currentPlayer;
     Intent intent;
     TextView firepowerName;
@@ -43,22 +43,12 @@ public class FirepowerActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firepower2);
-        currentPlayer = 1;
+
+        intent = getIntent();
+        currentPlayer = intent.getIntExtra("currentPlayer", 1);
         ArrayList<HashMap<String, String>> firepowerArrayList = dbTools.getFirepower(currentPlayer);
 
         if(firepowerArrayList.size() != 0) {
-         /*s   ArrayList<Integer> empty = new ArrayList<Integer>();
-            for(int i = 0; i < firepowerArrayList.size(); i++) {
-                Log.d("Ayyyy", Integer.toString(i));
-                if(firepowerArrayList.get(i).get("ammo").equals("0")) {
-                    Log.d("Ayyyy", firepowerArrayList.get(i).get("firepowerID"));
-                    Log.d("Ayyyy", firepowerArrayList.get(i).get("firepowerName"));
-                    Log.d("Ayyyy", firepowerArrayList.get(i).get("ammo"));
-                    empty.add(i +1);
-                }
-
-            }
-            */
 
             ListView listView = getListView();
             listView.setOnItemClickListener(new OnItemClickListener() {
@@ -69,8 +59,13 @@ public class FirepowerActivity extends ListActivity {
                     String firepowerIdValue = firepowerName.getText().toString();
 
                     int i = Integer.parseInt(firepowerIdValue);
-                    if(dbTools.checkAmmo(Integer.parseInt(firepowerIdValue), currentPlayer) != 0)
-                        setFirepower(Integer.parseInt(firepowerIdValue) -1);
+                    if(dbTools.checkAmmo(Integer.parseInt(firepowerIdValue), currentPlayer) != 0) {
+                        currentFirepower = Integer.parseInt(firepowerIdValue) -1;
+                        getFirepower(currentFirepower);
+
+
+                    }
+                        //setFirepower(Integer.parseInt(firepowerIdValue) -1);
 
                     //intent back to grid + putExtra type of id on firepower
 
@@ -85,16 +80,18 @@ public class FirepowerActivity extends ListActivity {
             listView.setAdapter(listAdapter);
 
         }
+
     }
-    public void getFirepower() {
-
-
+    public void getFirepower(int i) {
+        dbTools.updateFirepower(i, currentPlayer);
+        Intent gameViewIntent = new Intent(this, GameViewActivity.class);
+        gameViewIntent.putExtra("currentFirepower", currentFirepower);
+        startActivity(gameViewIntent);
 
     }
 
     public void setFirepower(int i) {
-        currentFirepower = firePowerFactory.setFirePower(i);
-        Log.d("Ayyyy", currentFirepower.getName());
+        //currentFirepower = firePowerFactory.setFirePower(i);
         dbTools.updateFirepower(i, currentPlayer);
         //Intent intent = new Intent(this, IntermediateActivity.class);
         Intent intent = new Intent(this, ShipSelectionActivity.class);
