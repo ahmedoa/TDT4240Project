@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import com.g4.progark.battleships.DB.DBTools;
 import com.g4.progark.battleships.R;
+import com.g4.progark.battleships.utility.Constants;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,13 +24,11 @@ public class AdvancedGameSetupActivity extends AppCompatActivity {
     EditText normalEditText;
     EditText clusterBombEditText;
     EditText airStrikeEditText;
-    String gameMode;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advanced_setup);
         Intent intent = getIntent();
-        gameMode = intent.getStringExtra(GameModeActivity.GAME_MODE);
         dbTools = new DBTools(this);
 
         normalEditText = (EditText) findViewById(R.id.normalEditText);
@@ -40,8 +39,7 @@ public class AdvancedGameSetupActivity extends AppCompatActivity {
     public void startGame(View v) {
 
         prepareDatabase();
-        Intent intent = new Intent(this, ShipSelectionActivity.class);
-        //intent.putExtra(GameModeActivity.GAME_MODE, gameMode);
+        Intent intent = new Intent(this, GameMapSelectionListActivity.class);
         startActivity(intent);
 
     }
@@ -58,6 +56,13 @@ public class AdvancedGameSetupActivity extends AppCompatActivity {
         ArrayList<HashMap<String, String>> firepowerArrayList = new ArrayList<HashMap<String, String>>();
 
         HashMap<String, String> normalFirepowerMap = new HashMap<String, String>();
+        Constants.normalAmmo = normalEditText.getText().length() != 0 ?
+                normalEditText.getText().toString() : "999";
+        Constants.clusterBombAmmo = clusterBombEditText.getText().length() != 0 ?
+                clusterBombEditText.getText().toString() : "0";
+        Constants.airStrikeAmmo = airStrikeEditText.getText().length() != 0 ?
+                airStrikeEditText.getText().toString() : "0";
+
         normalFirepowerMap.put("firepowerName", "Normal");
         normalFirepowerMap.put("ammo", normalEditText.getText().length() != 0 ?
                 normalEditText.getText().toString() : "999");

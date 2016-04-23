@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.g4.progark.battleships.R;
+import com.g4.progark.battleships.utility.Constants;
 
 /**
  * Created by rout on 18.04.2016.
@@ -34,18 +35,21 @@ public class GameModeListActivity extends AppCompatActivity{
 
                if (position == 1) {
                    Intent intent = new Intent(GameModeListActivity.this, GameMapSelectionListActivity.class);
+                   Constants.chosenGameMode = 0;
                    startActivity(intent);
                    Toast.makeText(getApplicationContext(), "Standard game mode",
                            Toast.LENGTH_LONG).show();
                }
                else if (position == 2){
                    Intent intent = new Intent(GameModeListActivity.this, GameMapSelectionListActivity.class);
+                   Constants.chosenGameMode = 1;
                    startActivity(intent);
                    Toast.makeText(getApplicationContext(), "Oneshot game mode",
                            Toast.LENGTH_LONG).show();
                }
                else if (position == 3){
-                   Intent intent = new Intent(GameModeListActivity.this, GameMapSelectionListActivity.class);
+                   Intent intent = new Intent(GameModeListActivity.this, AdvancedGameSetupActivity.class);
+                   Constants.chosenGameMode = 2;
                    startActivity(intent);
                    Toast.makeText(getApplicationContext(), "Advanced game mode",
                            Toast.LENGTH_LONG).show();

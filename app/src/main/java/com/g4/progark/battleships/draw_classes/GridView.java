@@ -86,19 +86,19 @@ public class GridView{
 
 
 
-            float xcoordinate = top_left.getX();
-            float ycoordinate = top_left.getY();
+        float xcoordinate = top_left.getX();
+        float ycoordinate = top_left.getY();
 
-            for (int i = 0; i < num_cols; i++) {
-                //xcoordinate = xcoordinate+i*tile_width;
-                for (int j = 0; j < num_rows; j++) {
+        for (int i = 0; i < num_cols; i++) {
+            //xcoordinate = xcoordinate+i*tile_width;
+            for (int j = 0; j < num_rows; j++) {
 
 
-                    //tiles.put(new Coordinate((float)i,(float)j), new GameTile(new EmptyTile(), xcoordinate+i*tile_width, ycoordinate+j*tile_height));
-                    tiles.get(new Coordinate((float)i, (float)j)).setC(xcoordinate+i*tile_width);
-                    tiles.get(new Coordinate((float)i, (float)j)).setR(ycoordinate + j * tile_height);
-                }
+                //tiles.put(new Coordinate((float)i,(float)j), new GameTile(new EmptyTile(), xcoordinate+i*tile_width, ycoordinate+j*tile_height));
+                tiles.get(new Coordinate((float)i, (float)j)).setC(xcoordinate+i*tile_width);
+                tiles.get(new Coordinate((float)i, (float)j)).setR(ycoordinate + j * tile_height);
             }
+        }
 
 
 
@@ -161,9 +161,9 @@ public class GridView{
         }
         */
 
-       for(GameTile tile: tiles.values()){
-           tile.drawTile(canvas, tile.getC(), tile.getR(), tile_rect_width, tile_rect_height);
-       }
+        for(GameTile tile: tiles.values()){
+            tile.drawTile(canvas, tile.getC(), tile.getR(), tile_rect_width, tile_rect_height);
+        }
 
 
         /*
@@ -196,7 +196,7 @@ public class GridView{
 
         GameTile tile = tiles.get(c);
 
-       // Set<Coordinate> cs = tiles.keySet();
+        // Set<Coordinate> cs = tiles.keySet();
 
         if(tile != null) {
 

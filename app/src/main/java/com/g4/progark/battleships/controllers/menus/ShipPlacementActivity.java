@@ -2,6 +2,7 @@ package com.g4.progark.battleships.controllers.menus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.g4.progark.battleships.draw_classes.GridView;
@@ -21,6 +22,7 @@ public class ShipPlacementActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("ALEKSISTHEWORST", "FUNKER");
 
         try {
             if (Constants.CURRENT_PLAYER == 1) {
@@ -32,7 +34,7 @@ public class ShipPlacementActivity extends AppCompatActivity {
                     player_1_ship_grid.setTiles(Constants.SHIP_TILES1);
                 }
 
-                spv = new ShipPlacementView(this, "sea", player_1_ship_grid);
+                spv = new ShipPlacementView(this, Constants.chosenGameMap, player_1_ship_grid);
             } else {
                 player_2_ship_grid = new GridView(new Coordinate(0, 0),
                         Constants.SHIP_GRID_BORDER, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, Constants.NUMBER_COLUMN_TILES, Constants.NUMBER_ROW_TILES);
@@ -42,7 +44,7 @@ public class ShipPlacementActivity extends AppCompatActivity {
                     player_2_ship_grid.setTiles(Constants.SHIP_TILES2);
                 }
 
-                spv = new ShipPlacementView(this, "sea", player_2_ship_grid);
+                spv = new ShipPlacementView(this, Constants.chosenGameMap, player_2_ship_grid);
             }
 
         } catch (Exception e){

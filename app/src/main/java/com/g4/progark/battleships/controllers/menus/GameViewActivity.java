@@ -1,19 +1,40 @@
 package com.g4.progark.battleships.controllers.menus;
 
-import android.os.Bundle;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import com.g4.progark.battleships.R;
+import com.g4.progark.battleships.controllers.GameController;
 import com.g4.progark.battleships.draw_classes.GameView;
 import com.g4.progark.battleships.draw_classes.GridView;
+import com.g4.progark.battleships.models.Firepower;
+import com.g4.progark.battleships.models.FirepowerFactory;
+import com.g4.progark.battleships.models.GameMap;
+import com.g4.progark.battleships.models.GameTile;
+import com.g4.progark.battleships.models.Player;
 import com.g4.progark.battleships.utility.Constants;
 import com.g4.progark.battleships.utility.Coordinate;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentNavigableMap;
 
 public class GameViewActivity extends AppCompatActivity {
-
 
 
 
@@ -25,7 +46,7 @@ public class GameViewActivity extends AppCompatActivity {
 
     private GameView gameView;
 
-
+    private int currentFirepowerInt;
 
     //SharedPreferences shared = getSharedPreferences("test", Context.MODE_PRIVATE);
 
@@ -35,13 +56,14 @@ public class GameViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Intent i = getIntent();
+        currentFirepowerInt = i.getIntExtra("selectedFirePower", 0);
 
         float x1 = Constants.SCREEN_WIDTH/(float)2 - (Constants.SHIP_GRID_WIDTH+Constants.SHIP_GRID_BORDER)/(float)2;
         float y1 = Constants.SHIP_GRID_BORDER;
 
         float x2 = Constants.SCREEN_WIDTH/(float)2 - (Constants.STRIKE_GRID_WIDTH+Constants.STRIKE_GRID_BORDER)/(float)2;
         float y2 = Constants.SCREEN_HEIGHT - Constants.STRIKE_GRID_BORDER  - Constants.STRIKE_GRID_HEIGHT;
-
 
         try {
 
@@ -63,11 +85,18 @@ public class GameViewActivity extends AppCompatActivity {
                 player2_ship_grid.setTiles(Constants.SHIP_TILES2);
 
                 if(Constants.STRIKE_TILES1 != null){
+
+
                     player1_strike_grid.setTiles(Constants.STRIKE_TILES1);
+
+
                 }
 
-                gameView = new GameView(this, "sea", player1_ship_grid, player1_strike_grid, player2_ship_grid);
+                gameView = new GameView(this, player1_ship_grid, player1_strike_grid,
+                        player2_ship_grid, currentFirepowerInt);
             } else {
+
+
 
                 player2_ship_grid = new GridView(new Coordinate(x1,y1),
                         Constants.SHIP_GRID_BORDER, Constants.SHIP_GRID_WIDTH, Constants.SHIP_GRID_HEIGHT, Constants.NUMBER_COLUMN_TILES, Constants.NUMBER_ROW_TILES);
@@ -82,7 +111,7 @@ public class GameViewActivity extends AppCompatActivity {
 
                 if(Constants.STRIKE_TILES2 != null){
                     //player2_ship_grid = new GridView(new Coordinate(x1,y1),
-                            //Constants.SHIP_GRID_BORDER, Constants.SHIP_GRID_WIDTH, Constants.SHIP_GRID_HEIGHT, Constants.NUMBER_COLUMN_TILES, Constants.NUMBER_ROW_TILES);
+                    //Constants.SHIP_GRID_BORDER, Constants.SHIP_GRID_WIDTH, Constants.SHIP_GRID_HEIGHT, Constants.NUMBER_COLUMN_TILES, Constants.NUMBER_ROW_TILES);
 
 
                     player2_strike_grid.setTiles(Constants.STRIKE_TILES2);
@@ -93,7 +122,8 @@ public class GameViewActivity extends AppCompatActivity {
                 player2_ship_grid.setTiles(Constants.SHIP_TILES2);
 
 
-                gameView = new GameView(this, "sea", player2_ship_grid, player2_strike_grid, player1_ship_grid);
+                gameView = new GameView(this, player2_ship_grid, player2_strike_grid,
+                        player1_ship_grid, currentFirepowerInt);
             }
 
         } catch(Exception e){

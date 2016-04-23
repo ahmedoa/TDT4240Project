@@ -19,6 +19,8 @@ import com.g4.progark.battleships.DB.DBTools;
 import com.g4.progark.battleships.R;
 import com.g4.progark.battleships.models.Firepower;
 import com.g4.progark.battleships.models.FirepowerFactory;
+import com.g4.progark.battleships.utility.Constants;
+
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -32,8 +34,6 @@ import java.util.HashMap;
 public class FirepowerActivity extends ListActivity {
 
     FirepowerFactory firePowerFactory = new FirepowerFactory();
-    int currentFirepower;
-    int currentPlayer;
     Intent intent;
     TextView firepowerName;
     ListView lv;
@@ -45,8 +45,7 @@ public class FirepowerActivity extends ListActivity {
         setContentView(R.layout.activity_firepower2);
 
         intent = getIntent();
-        currentPlayer = intent.getIntExtra("currentPlayer", 1);
-        ArrayList<HashMap<String, String>> firepowerArrayList = dbTools.getFirepower(currentPlayer);
+        ArrayList<HashMap<String, String>> firepowerArrayList = dbTools.getFirepower(Constants.CURRENT_PLAYER);
 
         if(firepowerArrayList.size() != 0) {
 
@@ -59,16 +58,10 @@ public class FirepowerActivity extends ListActivity {
                     String firepowerIdValue = firepowerName.getText().toString();
 
                     int i = Integer.parseInt(firepowerIdValue);
-                    if(dbTools.checkAmmo(Integer.parseInt(firepowerIdValue), currentPlayer) != 0) {
-                        currentFirepower = Integer.parseInt(firepowerIdValue) -1;
-                        getFirepower(currentFirepower);
-
-
+                    if(dbTools.checkAmmo(Integer.parseInt(firepowerIdValue), Constants.CURRENT_PLAYER) != 0) {
+                        Constants.currentFirePower = Integer.parseInt(firepowerIdValue) -1;
+                        getFirepower();
                     }
-                        //setFirepower(Integer.parseInt(firepowerIdValue) -1);
-
-                    //intent back to grid + putExtra type of id on firepower
-
                 }
             });
 
@@ -78,24 +71,14 @@ public class FirepowerActivity extends ListActivity {
                     R.id.firepowerAmmo} );
 
             listView.setAdapter(listAdapter);
-
         }
-
     }
-    public void getFirepower(int i) {
-        dbTools.updateFirepower(i, currentPlayer);
+    public void getFirepower() {
+        dbTools.updateFirepower(Constants.currentFirePower, Constants.CURRENT_PLAYER);
         Intent gameViewIntent = new Intent(this, GameViewActivity.class);
-        gameViewIntent.putExtra("currentFirepower", currentFirepower);
+        gameViewIntent.putExtra("selectedFirePower", Constants.currentFirePower);
         startActivity(gameViewIntent);
 
-    }
-
-    public void setFirepower(int i) {
-        //currentFirepower = firePowerFactory.setFirePower(i);
-        dbTools.updateFirepower(i, currentPlayer);
-        //Intent intent = new Intent(this, IntermediateActivity.class);
-        Intent intent = new Intent(this, ShipSelectionActivity.class);
-        startActivity(intent);
     }
 
 }

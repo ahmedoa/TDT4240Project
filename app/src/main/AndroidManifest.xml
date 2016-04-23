@@ -30,7 +30,16 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Set to "landscape" to change orientation -->
         </activity>
         <activity
+            android:name=".controllers.menus.FirepowerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > <!-- Set to "landscape" to change orientation -->
+        </activity>
+        <activity
             android:name=".controllers.menus.GameModeListActivity"
+            android:label="@string/title_activity_game_mode_list" >
+        </activity>
+        <activity
+            android:name=".controllers.menus.AdvancedGameSetupActivity"
             android:label="@string/title_activity_game_mode_list" >
         </activity>
         <activity
@@ -39,6 +48,10 @@
         </activity>
         <activity
             android:name=".controllers.menus.GameViewActivity"
+            android:label="@string/title_activity_game_view" >
+        </activity>
+        <activity
+            android:name=".controllers.menus.WinningActivity"
             android:label="@string/title_activity_game_view" >
         </activity>
         <activity
@@ -52,30 +65,6 @@
         <activity
             android:name=".controllers.menus.ShipPlacementActivity"
             android:label="Grid to place ship" >>
-        </activity>
-
-        <activity
-            android:name=".controllers.menus.GameModeListActivity"
-             >
-        </activity>
-
-
-
-
-
-
-        <activity
-            android:name=".controllers.menus.FirepowerActivity"
-            android:label="@string/title_activity_firepower" >
-        </activity>
-        <activity
-            android:name=".controllers.menus.GameModeActivity"
-            android:label="@string/title_activity_firepower" >
-        </activity>
-
-        <activity
-            android:name=".controllers.menus.AdvancedGameSetupActivity"
-            android:label="@string/title_activity_intermediate" >
         </activity>
     </application>
 

@@ -68,8 +68,14 @@ public class Constants {
 
     public static Ship CURRENT_SHIP_SELECTED = null;
 
-    public static List<Ship> PLAYER1_SHIPS = new ArrayList<Ship>();
-    public static List<Ship> PLAYER2_SHIPS = new ArrayList<Ship>();
+    public static List<Ship> PLAYER1_SHIPS = new ArrayList<>();
+    public static List<Ship> PLAYER2_SHIPS = new ArrayList<>();
 
+    public static String chosenGameMap;
+    public static int chosenGameMode;
+    public static int currentFirePower;
 
+    public static String normalAmmo;
+    public static String clusterBombAmmo;
+    public static String airStrikeAmmo;
 }

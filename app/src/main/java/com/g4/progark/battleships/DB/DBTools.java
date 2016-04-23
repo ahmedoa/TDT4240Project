@@ -67,6 +67,19 @@ public class DBTools extends SQLiteOpenHelper {
 
     }
 
+    public void restAmmoToSelected(int  firepowerId, String newAmmo) {
+
+        SQLiteDatabase database = this.getWritableDatabase();
+
+        String query = "UPDATE firepower1 SET AMMO = " + newAmmo + " WHERE firepowerID = " + (firepowerId);
+        String query2 = "UPDATE firepower2 SET AMMO = " + newAmmo + " WHERE firepowerID = " + (firepowerId);
+
+        database.execSQL(query);
+        database.execSQL(query2);
+        database.close();
+
+    }
+
     public void updateFirepower(int firepowerId, int player) {
 
         SQLiteDatabase database = this.getWritableDatabase();
@@ -74,7 +87,6 @@ public class DBTools extends SQLiteOpenHelper {
 
         database.execSQL(query);
         database.close();
-        Log.d("FUNKER", query);
 
     }
 
