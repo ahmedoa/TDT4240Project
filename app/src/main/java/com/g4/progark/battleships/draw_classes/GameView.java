@@ -242,8 +242,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback{
                 }
             }
             drawGameView();
-            switchTurns();
             if(gotWinner == false) {
+                switchTurns();
                 Intent intent = new Intent(getContext(), IntermediateActivity.class);
                 getContext().startActivity(intent);
             }

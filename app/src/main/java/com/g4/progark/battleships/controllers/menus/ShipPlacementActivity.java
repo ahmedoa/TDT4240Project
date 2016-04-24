@@ -1,5 +1,6 @@
 package com.g4.progark.battleships.controllers.menus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,12 +18,15 @@ public class ShipPlacementActivity extends AppCompatActivity {
     private ShipPlacementView spv;
     private GridView player_1_ship_grid;
     private GridView player_2_ship_grid;
+    private int selectedTiles;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("ALEKSISTHEWORST", "FUNKER");
+        Intent intent = getIntent();
+        selectedTiles = intent.getIntExtra("selectedTiles", 0);
+        Log.d("selectedTiles", selectedTiles + "");
 
         try {
             if (Constants.CURRENT_PLAYER == 1) {
@@ -55,6 +59,18 @@ public class ShipPlacementActivity extends AppCompatActivity {
         Toast.makeText(this, "Player " + Constants.CURRENT_PLAYER + " place your selected ship", Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if(Constants.CURRENT_PLAYER == 1)
+            Constants.NUMBER_SHIP_TILES_PLAYER1 += selectedTiles;
+        else {
+            Constants.NUMBER_SHIP_TILES_PLAYER2 += selectedTiles;
+        }
+        Intent i = new Intent(getApplicationContext(), ShipSelectionActivity.class);
+        startActivity(i);
+
+    }
 
 
 }

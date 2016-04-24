@@ -2,10 +2,6 @@ package com.g4.progark.battleships.controllers.menus;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.widget.ListViewAutoScrollHelper;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -17,15 +13,10 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.g4.progark.battleships.DB.DBTools;
 import com.g4.progark.battleships.R;
-import com.g4.progark.battleships.models.Firepower;
 import com.g4.progark.battleships.models.FirepowerFactory;
 import com.g4.progark.battleships.utility.Constants;
 
-import android.util.Log;
-
 import java.util.ArrayList;
-import java.util.List;
-import android.widget.ArrayAdapter;
 import java.util.HashMap;
 
 /**
@@ -33,16 +24,14 @@ import java.util.HashMap;
  */
 public class FirepowerActivity extends ListActivity {
 
-    FirepowerFactory firePowerFactory = new FirepowerFactory();
     Intent intent;
     TextView firepowerName;
-    ListView lv;
     DBTools dbTools = new DBTools(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_firepower2);
+        setContentView(R.layout.activity_firepower);
 
         intent = getIntent();
         ArrayList<HashMap<String, String>> firepowerArrayList = dbTools.getFirepower(Constants.CURRENT_PLAYER);
@@ -57,8 +46,7 @@ public class FirepowerActivity extends ListActivity {
                     firepowerName = (TextView) view.findViewById(R.id.firepowerId);
                     String firepowerIdValue = firepowerName.getText().toString();
 
-                    int i = Integer.parseInt(firepowerIdValue);
-                    if(dbTools.checkAmmo(Integer.parseInt(firepowerIdValue), Constants.CURRENT_PLAYER) != 0) {
+                    if(Integer.parseInt(firepowerIdValue) -1 == 0 || dbTools.checkAmmo(Integer.parseInt(firepowerIdValue), Constants.CURRENT_PLAYER) != 0) {
                         Constants.currentFirePower = Integer.parseInt(firepowerIdValue) -1;
                         getFirepower();
                     }
@@ -74,7 +62,8 @@ public class FirepowerActivity extends ListActivity {
         }
     }
     public void getFirepower() {
-        dbTools.updateFirepower(Constants.currentFirePower, Constants.CURRENT_PLAYER);
+        if(Constants.currentFirePower != 0)
+            dbTools.updateFirepower(Constants.currentFirePower, Constants.CURRENT_PLAYER);
         Intent gameViewIntent = new Intent(this, GameViewActivity.class);
         gameViewIntent.putExtra("selectedFirePower", Constants.currentFirePower);
         startActivity(gameViewIntent);

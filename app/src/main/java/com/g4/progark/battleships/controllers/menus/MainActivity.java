@@ -52,21 +52,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void goToGame(View v){
-
-        Intent intent = new Intent(this, ShipSelectionActivity.class);
-        startActivity(intent);
-
-
-    }
-/**Added  by Itishree to include the goto game modes view **/
-    public void goToGameModes(View v){
-
-        Intent intent1 = new Intent(this, GameModeListActivity.class);
-        startActivity(intent1);
-
-    }
-
-
 }

@@ -22,12 +22,12 @@ import java.util.List;
 public class GameMapSelectionListActivity extends AppCompatActivity implements
         AdapterView.OnItemClickListener {
 
-        public static final String[] titles = new String[] {"grass","naturesky","oceanwater","seabeach","sunset","wave"
+        public static final String[] titles = new String[] {"sea","naturesky","oceanwater","seabeach","sunset","wave"
 
         };
 
 
-        public static final Integer[] images = { R.drawable.grass,R.drawable.naturesky,R.drawable.oceanwater,R.drawable.seabeach,R.drawable.sunset,
+        public static final Integer[] images = { R.drawable.sea,R.drawable.naturesky,R.drawable.oceanwater,R.drawable.seabeach,R.drawable.sunset,
                 R.drawable.wave};
 
         ListView listView;

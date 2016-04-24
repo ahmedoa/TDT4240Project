@@ -15,24 +15,16 @@
         android:text="End Game"
         android:id="@+id/endGame"
         android:onClick="goToGameModes"
+        android:textColor="#000000"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="82dp" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/play_again_button"
-        android:id="@+id/playAgainButton"
-        android:layout_marginBottom="40dp"
-        android:layout_above="@+id/endGame"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:textSize="30sp"
+        android:textColor="#000000"
         android:id="@+id/winnerTextView"
         android:layout_marginTop="103dp"
         android:layout_alignParentTop="true"

@@ -19,7 +19,6 @@ public class WinningActivity extends AppCompatActivity {
     DBTools dbTools = new DBTools(this);
 
     Button endGame;
-    Button playAgainGame;
     TextView winnerTextView;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +27,8 @@ public class WinningActivity extends AppCompatActivity {
         setContentView(R.layout.activity_winning);
 
         winnerTextView = (TextView) findViewById(R.id.winnerTextView);
-        winnerTextView.setText("Player: " + Constants.CURRENT_PLAYER + " won!");
+        winnerTextView.setText("Player " + Constants.CURRENT_PLAYER + " won!");
         endGame = (Button) findViewById(R.id.endGame);
-        playAgainGame = (Button) findViewById(R.id.playAgainButton);
 
         endGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,15 +39,6 @@ public class WinningActivity extends AppCompatActivity {
                 startActivity(new Intent(WinningActivity.this, MainActivity.class));
             }
         });
-
-        /*playAgainGame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetGame();
-                setBackToSelectedAmmo();
-                startActivity(new Intent(WinningActivity.this, ShipSelectionActivity.class));
-            }
-        });*/
     }
     public void resetSettings() {
 
@@ -57,13 +46,7 @@ public class WinningActivity extends AppCompatActivity {
         Constants.chosenGameMap = null;
 
     }
-    public void setBackToSelectedAmmo() {
 
-        dbTools.restAmmoToSelected(0, Constants.normalAmmo);
-        dbTools.restAmmoToSelected(1, Constants.clusterBombAmmo );
-        dbTools.restAmmoToSelected(2, Constants.airStrikeAmmo);
-
-    }
     public void resetDB() {
 
         dbTools.clearFirepowerTable();
@@ -88,6 +71,16 @@ public class WinningActivity extends AppCompatActivity {
         Constants.PLAYER2_SHIPS.clear();
 
         Constants.currentFirePower = 0;
+
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        resetGame();
+        resetSettings();
+        resetDB();
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
 
     }
 }

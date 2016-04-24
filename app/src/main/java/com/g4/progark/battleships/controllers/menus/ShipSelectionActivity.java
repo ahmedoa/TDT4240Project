@@ -32,7 +32,7 @@ public class ShipSelectionActivity extends AppCompatActivity implements AdapterV
 
         if(Constants.NUMBER_SHIP_TILES_PLAYER2 == 0){
             Constants.CURRENT_PLAYER = 1;
-            Intent i = new Intent(this, GameViewActivity.class);
+            Intent i = new Intent(this, IntermediateActivity.class);
             startActivity(i);
 
             Toast.makeText(this, "Game ready", Toast.LENGTH_SHORT).show();
@@ -53,7 +53,7 @@ public class ShipSelectionActivity extends AppCompatActivity implements AdapterV
 
         String tcount = Constants.CURRENT_PLAYER == 1 ? "" + Constants.NUMBER_SHIP_TILES_PLAYER1 : ""+Constants.NUMBER_SHIP_TILES_PLAYER2;
 
-        tile_count.setText("Tiles remaining for player" + Constants.CURRENT_PLAYER + ":  " + tcount);
+        tile_count.setText("Tiles remaining for player " + Constants.CURRENT_PLAYER + " : " + tcount);
 
         spinner = (Spinner) findViewById(R.id.orientation_spinner);
 
@@ -154,6 +154,7 @@ public class ShipSelectionActivity extends AppCompatActivity implements AdapterV
         }
 
         Intent intent = new Intent(this, ShipPlacementActivity.class);
+        intent.putExtra("selectedTiles", selected);
         startActivity(intent);
 
     }

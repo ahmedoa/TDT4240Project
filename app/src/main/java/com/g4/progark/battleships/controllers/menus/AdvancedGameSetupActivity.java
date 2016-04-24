@@ -31,7 +31,7 @@ public class AdvancedGameSetupActivity extends AppCompatActivity {
         Intent intent = getIntent();
         dbTools = new DBTools(this);
 
-        normalEditText = (EditText) findViewById(R.id.normalEditText);
+        //normalEditText = (EditText) findViewById(R.id.normalEditText);
         clusterBombEditText = (EditText) findViewById(R.id.clusterBombEditText);
         airStrikeEditText = (EditText) findViewById(R.id.airStrikeEditText);
     }
@@ -55,26 +55,25 @@ public class AdvancedGameSetupActivity extends AppCompatActivity {
 
         ArrayList<HashMap<String, String>> firepowerArrayList = new ArrayList<HashMap<String, String>>();
 
-        HashMap<String, String> normalFirepowerMap = new HashMap<String, String>();
+        /*
         Constants.normalAmmo = normalEditText.getText().length() != 0 ?
                 normalEditText.getText().toString() : "999";
         Constants.clusterBombAmmo = clusterBombEditText.getText().length() != 0 ?
                 clusterBombEditText.getText().toString() : "0";
         Constants.airStrikeAmmo = airStrikeEditText.getText().length() != 0 ?
-                airStrikeEditText.getText().toString() : "0";
+                airStrikeEditText.getText().toString() : "0"; */
 
+        HashMap<String, String> normalFirepowerMap = new HashMap<>();
         normalFirepowerMap.put("firepowerName", "Normal");
-        normalFirepowerMap.put("ammo", normalEditText.getText().length() != 0 ?
-                normalEditText.getText().toString() : "999");
-        normalFirepowerMap.put("damage", "1");
+        normalFirepowerMap.put("ammo", "∞");
 
-        HashMap<String, String> clusterBombFirepowerMap = new HashMap<String, String>();
+        HashMap<String, String> clusterBombFirepowerMap = new HashMap<>();
         clusterBombFirepowerMap.put("firepowerName", "Cluster Bomb");
         clusterBombFirepowerMap.put("ammo", clusterBombEditText.getText().length() != 0 ?
                 clusterBombEditText.getText().toString() : "0");
         clusterBombFirepowerMap.put("damage", "1");
 
-        HashMap<String, String> airStrikeFirepowerMap = new HashMap<String, String>();
+        HashMap<String, String> airStrikeFirepowerMap = new HashMap<>();
         airStrikeFirepowerMap.put("firepowerName", "Air Strike");
         airStrikeFirepowerMap.put("ammo", airStrikeEditText.getText().length() != 0 ?
                 airStrikeEditText.getText().toString() : "0");
